@@ -1,0 +1,272 @@
+header, body, footer {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    color: #ffffcc;
+    font-family: 'Lucida Calligraphy', fantasy;
+    background-color: black;
+    height: 600px;
+}
+
+/* main logic behind the creation of the alert scroll bar */
+#scroll-container {
+    position: fixed;
+    border-radius: 5px;
+    overflow: hidden;
+    /* This places an overlay over the top of the page */
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+  
+#scroll-text {
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    /* change the speed of the alert text */
+    -moz-animation: move-alert 25s linear infinite;
+    -webkit-animation: move-alert 25s linear infinite;
+    animation: move-alert 25s linear infinite;
+}
+  
+/* for Firefox */
+@-moz-keyframes move-alert {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+}
+  
+/* for Chrome */
+@-webkit-keyframes move-alert {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+}
+  
+@keyframes move-alert {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+}
+
+/* top banner area specifically for the castle */
+section#top nav.horizontal img {
+    float: left;
+}
+
+.banner {
+    position: absolute;
+    left: 50%;
+    /* 
+     * moves the banner down from the top 
+     * of the page to leave room for the alert
+     */
+    top: 5%;
+    transform: translate(-50%, 0%);
+    max-width: 1200px;
+    margin: 0 auto;
+    float: left;
+    width: 54%;
+}
+
+@media (min-width: 768px) {
+    .banner {
+      width: 54%;
+      float: left;
+    }
+}
+
+.castle {
+    width: 12.5%;
+}
+
+@media (min-width: 768px) {
+    .castle {
+      width: 12.5%;
+    }
+}
+
+#castle li {
+    clear: both;
+    content: "";
+    display: flex;
+    float: left;
+    list-style-type: none;
+}
+
+/* 
+ * clears the area from the banner allowing the
+ * vertical list to not be affected by float:left 
+ */
+section#top nav.horizontal::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/* 
+ * sets up the screen for the text in the header, the images on the buttons,
+ * and the text in the buttons
+ */
+.container {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    max-height: 500px;
+    top: -5%;
+}
+
+.container p {
+    color: white;
+}
+
+.container h2::after{
+    content: "\a";
+    white-space: pre;
+}
+
+#first::after{
+    content: "\a\a";
+    white-space: pre;
+}
+
+#second::after{
+    content: "\a\a";
+    white-space: pre;
+}
+
+#third::after{
+    content: "\a\a";
+    white-space: pre;
+}
+
+/*
+ * The magic behind the background image on the main page
+ * inset allows the illusion of the background to be bigger
+ * than it actually is, creating the illusion
+ * of a never-ending map.
+ */
+#eastguard {
+    background-image: url('fqImgLib/FQ_March_Of_Eastguard_Map.png');
+    box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
+    -ms-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
+    -moz-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
+    -webkit-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin: auto;
+}
+
+#left a {
+	color: #007bff; /* Blue link color */
+	text-decoration: none; /* Remove underline */
+}
+
+#left a:hover {
+	color: #0056b3; /* Darker blue on hover */
+}
+
+/* centered text for the buttons*/
+.centered {
+    position: absolute;
+    top: 60%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    font-size: 14.6667px;
+    font-size: 1.0em;
+}
+
+section#left {
+    float: none;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+section#left ul {
+    float: none;
+    position: relative;
+    height: 100vh;
+    /* remove bullets */
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+section#left ul p {
+    padding-inline-start: 8px;
+    font-size: small;
+    color: #009900;
+}
+
+#left ul p::before {
+    content: "\a\a";
+    white-space: pre;
+}
+
+/* copyright */
+footer {
+    background-color: black;
+    bottom: 0;
+    z-index: 5;
+    height: 600px;
+}
+
+footer p {
+    padding: 50px;
+    text-align: center;
+    color: white;
+}
+
+footer .thankyou {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54%;
+}
+
+@media (min-width: 768px) {
+    .thankyou {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 54%;
+    }
+}
+
+footer .legaldocs {
+    text-align: center;
+    color: #007bff; /* Blue link color */
+}
+
+footer .legaldocs a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none; /* Remove underline */
+}
+
+footer .legaldocs a:hover {
+    color: #0056b3;
+}
+  

@@ -1,0 +1,97 @@
+body, footer {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    font-family: 'Lucida Calligraphy', fantasy;
+}
+
+/* container holding the image and the text for buttons */
+.container {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    max-height: 500px;
+}
+
+#eastguard {
+    background-color: #ffffcc;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin: auto;
+}
+
+#left a {
+	color: #007bff; /* Blue link color */
+	text-decoration: none; /* Remove underline */
+}
+
+#left a:hover {
+	color: #0056b3; /* Darker blue on hover */
+}
+
+/* centered text for the buttons*/
+.centered {
+    position: absolute;
+    top: 60%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    font-size: 14.6667px;
+    font-size: 1.0em;
+}
+
+section#left {
+    float: none;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+section#left ul {
+    float: none;
+    position: relative;
+    height: 100vh;
+    /* remove bullets */
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+section#left ul p {
+    padding-inline-start: 8px;
+    font-size: small;
+    color: #009900;
+}
+
+#left ul p::before {
+    content: "\a\a";
+    white-space: pre;
+}
+
+/* copyright */
+footer {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    text-align: center;
+    color: black;
+}
+
+footer .legaldocs {
+    text-align: center;
+}
+
+footer .legaldocs a{
+    text-decoration: none;
+}
+  
