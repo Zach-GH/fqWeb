@@ -137,6 +137,11 @@ section#top nav.horizontal img {
     }
   }
 
+#firstDateSec::after{
+    content: "\a";
+    white-space: pre;
+}
+
 /* 
  * clears the area from the banner allowing the
  * vertical list to not be affected by float:left 
