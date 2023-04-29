@@ -107,6 +107,36 @@ section#top nav.horizontal img {
     list-style-type: none;
 }
 
+/*
+* This section formats the event dates on the right-hand side of the screen
+*/
+#titleEventDates {
+    position: absolute;
+    top: 6%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffcc;
+    font-family: 'Lucida Calligraphy', fantasy;
+    padding-right: 340px;
+    transform: translateX(50%);
+    font-size: 1em; /* initial font size */
+  }
+
+  @media (max-width: 768px) {
+    #titleEventDates {
+      font-size: .5em; /* font size for smaller screens */
+      padding-right: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #titleEventDates {
+      font-size: .25em; /* font size for even smaller screens */
+      padding-right: 150px;
+    }
+  }
+
 /* 
  * clears the area from the banner allowing the
  * vertical list to not be affected by float:left 
