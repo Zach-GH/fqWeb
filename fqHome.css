@@ -12,6 +12,13 @@ header {
     height: 600px;
 }
 
+/* mobile devices */
+@media only screen and (max-width: 1000px) {
+    header {
+      height: 300px;
+    }
+  }
+
 /* main logic behind the creation of the alert scroll bar */
 #scroll-container {
     position: fixed;
@@ -62,6 +69,13 @@ header {
     }
 }
 
+/* hide the alert scroll bar on mobile devices */
+@media only screen and (max-width: 1000px) {
+    #scroll-container {
+      display: none;
+    }
+  }
+
 /* top banner area specifically for the castle */
 section#top nav.horizontal img {
     float: left;
@@ -82,21 +96,8 @@ section#top nav.horizontal img {
     width: 54%;
 }
 
-@media (min-width: 768px) {
-    .banner {
-      width: 54%;
-      float: left;
-    }
-}
-
 .castle {
     width: 12.5%;
-}
-
-@media (min-width: 768px) {
-    .castle {
-      width: 12.5%;
-    }
 }
 
 #castle li {
@@ -106,6 +107,13 @@ section#top nav.horizontal img {
     float: left;
     list-style-type: none;
 }
+
+/* hide on mobile devices */
+@media only screen and (max-width: 1000px) {
+    .castle, #castle li {
+      display: none;
+    }
+  }
 
 /*
 * This section formats the event dates on the right-hand side of the screen
@@ -122,25 +130,18 @@ section#top nav.horizontal img {
     transform: translateX(50%);
     font-size: 1em; /* initial font size */
   }
-
-  @media (max-width: 768px) {
-    #titleEventDates {
-      font-size: .5em; /* font size for smaller screens */
-      padding-right: 150px;
-    }
-  }
   
-  @media (max-width: 480px) {
-    #titleEventDates {
-      font-size: .25em; /* font size for even smaller screens */
-      padding-right: 150px;
-    }
-  }
-
 #firstDateSec::after{
     content: "\a";
     white-space: pre;
 }
+
+/* hide on mobile devices */
+@media only screen and (max-width: 1000px) {
+    #titleEventDates {
+      display: none;
+    }
+  }
 
 /* 
  * clears the area from the banner allowing the
@@ -168,25 +169,36 @@ section#top nav.horizontal::after {
     color: white;
 }
 
-.container h2::after{
+.container h2::after {
     content: "\a";
     white-space: pre;
 }
 
-#first::after{
+#first::after {
     content: "\a\a";
     white-space: pre;
 }
 
-#second::after{
+#second::after {
     content: "\a\a";
     white-space: pre;
 }
 
-#third::after{
+#third::after {
     content: "\a\a";
     white-space: pre;
 }
+
+/* hide on mobile devices */
+@media only screen and (max-width: 1000px) {
+    .container p {
+      display: none;
+    }
+
+    .container h2 {
+      padding: 150px;
+    }
+  }
 
 /*
  * The magic behind the background image on the main page
@@ -194,19 +206,18 @@ section#top nav.horizontal::after {
  * than it actually is, creating the illusion
  * of a never-ending map.
  */
-#eastguard {
+ #eastguard {
     background-image: url('fqImgLib/FQ_March_Of_Eastguard_Map.png');
     box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
     -ms-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
     -moz-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
     -webkit-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: 100% 100%;
     margin: auto;
-}
+    background-attachment: fixed;
+  }
 
 #left a {
 	color: #007bff; /* Blue link color */
@@ -255,6 +266,15 @@ section#left ul p {
     white-space: pre;
 }
 
+/* media query for small screens */
+/* leaving this in the case I decide to go with a horizontal button screen on mobile devices */
+/* @media only screen and (max-width: 1000px) {
+  section#left ul {
+    display: flex;
+    flex-direction: row;
+    }
+  }   */
+
 /* copyright */
 footer {
     background-color: black;
@@ -263,10 +283,24 @@ footer {
     height: 600px;
 }
 
+/* mobile devices */
+@media only screen and (max-width: 1000px) {
+    footer {
+      height: 300px;
+    }
+  }
+
 footer p {
     padding: 50px;
     text-align: center;
     color: white;
+}
+
+/* hide on mobile devices */
+@media only screen and (max-width: 1000px) {
+    footer p {
+        padding: 25px;
+    }
 }
 
 footer .thankyou {
@@ -279,15 +313,10 @@ footer .thankyou {
     width: 54%;
 }
 
-@media (min-width: 768px) {
-    .thankyou {
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 54%;
+/* hide on mobile devices */
+@media only screen and (max-width: 1000px) {
+    footer .thankyou, #thankyouP {
+        display: none;
     }
 }
 
