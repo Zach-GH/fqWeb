@@ -12,13 +12,6 @@ header {
     height: 600px;
 }
 
-/* mobile devices */
-@media only screen and (max-width: 1000px) {
-    header {
-      height: 300px;
-    }
-  }
-
 /* main logic behind the creation of the alert scroll bar */
 #scroll-container {
     position: fixed;
@@ -69,13 +62,6 @@ header {
     }
 }
 
-/* hide the alert scroll bar on mobile devices */
-@media only screen and (max-width: 1000px) {
-    #scroll-container {
-      display: none;
-    }
-  }
-
 /* top banner area specifically for the castle */
 section#top nav.horizontal img {
     float: left;
@@ -108,40 +94,31 @@ section#top nav.horizontal img {
     list-style-type: none;
 }
 
-/* hide on mobile devices */
-@media only screen and (max-width: 1000px) {
-    .castle, #castle li {
-      display: none;
-    }
-  }
-
 /*
 * This section formats the event dates on the right-hand side of the screen
 */
 #titleEventDates {
     position: absolute;
-    top: 6%;
+    top: 4%;
     right: 0;
-    width: 100%;
     text-align: center;
     color: #ffffcc;
     font-family: 'Lucida Calligraphy', fantasy;
-    padding-right: 340px;
-    transform: translateX(50%);
     font-size: 1em; /* initial font size */
   }
-  
-#firstDateSec::after{
-    content: "\a";
-    white-space: pre;
+
+  .toggle-menu {
+    display: block;
+  }
+
+  /* Style the hamburger icon */
+.toggle-menu-icon {
+  display: none;
 }
 
-/* hide on mobile devices */
-@media only screen and (max-width: 1000px) {
-    #titleEventDates {
-      display: none;
-    }
-  }
+.bar {
+  display: none;
+}
 
 /* 
  * clears the area from the banner allowing the
@@ -188,17 +165,6 @@ section#top nav.horizontal::after {
     content: "\a\a";
     white-space: pre;
 }
-
-/* hide on mobile devices */
-@media only screen and (max-width: 1000px) {
-    .container p {
-      display: none;
-    }
-
-    .container h2 {
-      padding: 150px;
-    }
-  }
 
 /*
  * The magic behind the background image on the main page
@@ -266,15 +232,6 @@ section#left ul p {
     white-space: pre;
 }
 
-/* media query for small screens */
-/* leaving this in the case I decide to go with a horizontal button screen on mobile devices */
-/* @media only screen and (max-width: 1000px) {
-  section#left ul {
-    display: flex;
-    flex-direction: row;
-    }
-  }   */
-
 /* copyright */
 footer {
     background-color: black;
@@ -283,24 +240,10 @@ footer {
     height: 600px;
 }
 
-/* mobile devices */
-@media only screen and (max-width: 1000px) {
-    footer {
-      height: 300px;
-    }
-  }
-
 footer p {
     padding: 50px;
     text-align: center;
     color: white;
-}
-
-/* hide on mobile devices */
-@media only screen and (max-width: 1000px) {
-    footer p {
-        padding: 25px;
-    }
 }
 
 footer .thankyou {
@@ -311,13 +254,6 @@ footer .thankyou {
     align-items: center;
     justify-content: center;
     width: 54%;
-}
-
-/* hide on mobile devices */
-@media only screen and (max-width: 1000px) {
-    footer .thankyou, #thankyouP {
-        display: none;
-    }
 }
 
 footer .legaldocs {
@@ -332,5 +268,85 @@ footer .legaldocs a {
 
 footer .legaldocs a:hover {
     color: #0056b3;
+}
+
+/* mobile devices */
+@media only screen and (max-width: 1000px) {
+
+  header {
+    height: 600px;
+  }
+
+  #scroll-container {
+    display: none;
+  }
+
+  .castle, #castle li {
+    display: none;
+  }
+
+  #titleEventDates {
+    display: none;
+  }
+
+/* Hide the menu by default */
+.toggle-menu {
+  display: none;
+}
+
+/* Style the hamburger icon */
+.toggle-menu-icon {
+  display: block;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 20px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Rotate the bars to create an 'X' shape when the menu is open */
+.change .bar:first-child {
+  transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+.change .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.change .bar:last-child {
+  transform: rotate(45deg) translate(-4px, -4px);
+}
+
+  .container p {
+    display: none;
+  }
+
+  .container h2 {
+    padding: 150px;
+  }
+
+  #eastguard {
+    background-image: none;
+    box-shadow: none;
+    background-color: #ffffcc;
+  }
+
+  footer {
+    height: 600px;
+  }
+
+  footer .thankyou, #thankyouP {
+    display: none;
+  }
+
+  footer p {
+    padding: 25px;
+  }
+
 }
   
