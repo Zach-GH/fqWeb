@@ -82,21 +82,8 @@ section#top nav.horizontal img {
     width: 54%;
 }
 
-@media (min-width: 768px) {
-    .banner {
-      width: 54%;
-      float: left;
-    }
-}
-
 .castle {
     width: 12.5%;
-}
-
-@media (min-width: 768px) {
-    .castle {
-      width: 12.5%;
-    }
 }
 
 #castle li {
@@ -105,6 +92,32 @@ section#top nav.horizontal img {
     display: flex;
     float: left;
     list-style-type: none;
+}
+
+/*
+* This section formats the event dates on the right-hand side of the screen
+*/
+#titleEventDates {
+    position: absolute;
+    top: 4%;
+    right: 0;
+    text-align: center;
+    color: #ffffcc;
+    font-family: 'Lucida Calligraphy', fantasy;
+    font-size: 1em; /* initial font size */
+  }
+
+  .toggle-menu {
+    display: block;
+  }
+
+  /* Style the hamburger icon */
+.toggle-menu-icon {
+  display: none;
+}
+
+.bar {
+  display: none;
 }
 
 /* 
@@ -133,22 +146,22 @@ section#top nav.horizontal::after {
     color: white;
 }
 
-.container h2::after{
+.container h2::after {
     content: "\a";
     white-space: pre;
 }
 
-#first::after{
+#first::after {
     content: "\a\a";
     white-space: pre;
 }
 
-#second::after{
+#second::after {
     content: "\a\a";
     white-space: pre;
 }
 
-#third::after{
+#third::after {
     content: "\a\a";
     white-space: pre;
 }
@@ -159,19 +172,18 @@ section#top nav.horizontal::after {
  * than it actually is, creating the illusion
  * of a never-ending map.
  */
-#eastguard {
+ #eastguard {
     background-image: url('fqImgLib/FQ_March_Of_Eastguard_Map.png');
     box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
     -ms-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
     -moz-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
     -webkit-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: 100% 100%;
     margin: auto;
-}
+    background-attachment: fixed;
+  }
 
 #left a {
 	color: #007bff; /* Blue link color */
@@ -244,18 +256,6 @@ footer .thankyou {
     width: 54%;
 }
 
-@media (min-width: 768px) {
-    .thankyou {
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 54%;
-    }
-}
-
 footer .legaldocs {
     text-align: center;
     color: #007bff; /* Blue link color */
@@ -268,5 +268,86 @@ footer .legaldocs a {
 
 footer .legaldocs a:hover {
     color: #0056b3;
+}
+
+/* mobile devices */
+@media only screen and (max-width: 1000px) {
+
+  header {
+    height: 600px;
+  }
+
+  #scroll-container {
+    display: none;
+  }
+
+  .castle, #castle li {
+    display: none;
+  }
+
+  #titleEventDates {
+    display: none;
+  }
+
+/* Hide the menu by default */
+.toggle-menu {
+  display: none;
+}
+
+/* Style the hamburger icon */
+.toggle-menu-icon {
+  display: block;
+  cursor: pointer;
+  padding-inline-start: 8px;
+}
+
+.bar {
+  display: block;
+  width: 20px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Rotate the bars to create an 'X' shape when the menu is open */
+.change .bar:first-child {
+  transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+.change .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.change .bar:last-child {
+  transform: rotate(45deg) translate(-4px, -4px);
+}
+
+  .container p {
+    display: none;
+  }
+
+  .container h2 {
+    padding: 150px;
+  }
+
+  #eastguard {
+    background-image: none;
+    box-shadow: none;
+    background-color: #ffffcc;
+  }
+
+  footer {
+    height: 600px;
+  }
+
+  footer .thankyou, #thankyouP {
+    display: none;
+  }
+
+  footer p {
+    padding: 25px;
+  }
+
 }
   
