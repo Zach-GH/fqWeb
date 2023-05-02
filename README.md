@@ -12,6 +12,3 @@ status of the organization as well as any other potential organization updates.
 The intended use of this project is purely to update the website and experiment with different features
 and collaborate with other engineers/developers as well as demonstrating the look and feel
 to the Fantasy Quest staff.
-
-The website itself is being hosted from the /main branch and will recieve periodic updates from this branch
-which is intended to be the most up-to-date reflection of the project.
