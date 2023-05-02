@@ -298,6 +298,7 @@ footer .legaldocs a:hover {
 .toggle-menu-icon {
   display: block;
   cursor: pointer;
+  padding-inline-start: 8px;
 }
 
 .bar {

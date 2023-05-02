@@ -17,6 +17,19 @@ header {
     max-height: 500px;
 }
 
+.toggle-menu {
+    display: block;
+  }
+
+  /* Style the hamburger icon */
+.toggle-menu-icon {
+  display: none;
+}
+
+.bar {
+  display: none;
+}
+
 #eastguard {
     background-color: #ffffcc;
     background-size: cover;
@@ -93,5 +106,44 @@ footer .legaldocs {
 
 footer .legaldocs a{
     text-decoration: none;
+}
+
+/* mobile devices */
+@media only screen and (max-width: 1000px) {
+  
+    /* Hide the menu by default */
+    .toggle-menu {
+      display: none;
+    }
+    
+    /* Style the hamburger icon */
+    .toggle-menu-icon {
+      display: block;
+      cursor: pointer;
+      padding-inline-start: 8px;
+    }
+    
+    .bar {
+      display: block;
+      width: 20px;
+      height: 3px;
+      margin: 5px auto;
+      background-color: #333;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    /* Rotate the bars to create an 'X' shape when the menu is open */
+    .change .bar:first-child {
+      transform: rotate(-45deg) translate(-4px, 4px);
+    }
+    
+    .change .bar:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .change .bar:last-child {
+      transform: rotate(45deg) translate(-4px, -4px);
+    }
+    
 }
   
