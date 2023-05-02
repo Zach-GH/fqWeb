@@ -274,7 +274,7 @@ footer .legaldocs a:hover {
 @media only screen and (max-width: 1000px) {
 
   header {
-    height: 600px;
+    display: none;
   }
 
   #scroll-container {
@@ -298,7 +298,9 @@ footer .legaldocs a:hover {
 .toggle-menu-icon {
   display: block;
   cursor: pointer;
-  padding-inline-start: 8px;
+  padding: 10px;
+  padding-inline-start: 10px;
+  font-size: 16px;
 }
 
 .bar {
@@ -334,11 +336,11 @@ footer .legaldocs a:hover {
   #eastguard {
     background-image: none;
     box-shadow: none;
-    background-color: #ffffcc;
+    background-color: black;
   }
 
   footer {
-    height: 600px;
+    display: none;
   }
 
   footer .thankyou, #thankyouP {
