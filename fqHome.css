@@ -298,23 +298,23 @@ footer .legaldocs a:hover {
 .toggle-menu-icon {
   display: block;
   cursor: pointer;
-  padding: 10px;
+  padding: 30px;
   padding-inline-start: 10px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .bar {
   display: block;
-  width: 20px;
-  height: 3px;
-  margin: 5px auto;
+  width: 30px;
+  height: 5px;
+  margin: 10px auto;
   background-color: #333;
   transition: all 0.3s ease-in-out;
 }
 
 /* Rotate the bars to create an 'X' shape when the menu is open */
 .change .bar:first-child {
-  transform: rotate(-45deg) translate(-4px, 4px);
+  transform: rotate(-45deg) translate(-7px, 7px);
 }
 
 .change .bar:nth-child(2) {
@@ -322,7 +322,28 @@ footer .legaldocs a:hover {
 }
 
 .change .bar:last-child {
-  transform: rotate(45deg) translate(-4px, -4px);
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+
+@media (max-width: 767px) {
+  .toggle-menu-icon {
+    padding: 36px;
+    font-size: 24px;
+  }
+  
+  .bar {
+    width: 36px;
+    height: 6px;
+    margin: 12px auto;
+  }
+  
+  .change .bar:first-child {
+    transform: rotate(-45deg) translate(-9px, 9px);
+  }
+
+  .change .bar:last-child {
+    transform: rotate(45deg) translate(-9px, -9px);
+  }
 }
 
   .container p {
