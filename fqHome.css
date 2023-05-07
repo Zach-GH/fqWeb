@@ -150,25 +150,30 @@ section#top nav.horizontal::after {
     display: table;
 }
 
+.welcome-container {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  height: 223px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.welcome-container p {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* 
  * sets up the screen for the text in the header, the images on the buttons,
  * and the text in the buttons
  */
-.container {
-    position: relative;
-    overflow: auto;
-    width: 100%;
-    max-height: 500px;
-    top: -5%;
+.welcome-message {
+    font-size: 18px;
+    line-height: 1.5;
 }
 
-.container p {
+.welcome-message p {
     color: white;
-}
-
-.container h2::after {
-    content: "\a";
-    white-space: pre;
 }
 
 #first::after {
@@ -366,12 +371,12 @@ footer .legaldocs a:hover {
   }
 }
 
-  .container p {
-    display: none;
+  .welcome-message p {
+    /* display: none; */
   }
 
-  .container h2 {
-    padding: 150px;
+  .welcome-message h2 {
+    /* padding: 150px; */
   }
 
   #eastguard {
