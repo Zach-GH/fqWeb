@@ -97,7 +97,7 @@ section#top nav.horizontal img {
 /*
 * This section formats the event dates on the right-hand side of the screen
 */
-#titleEventDates {
+.titleEventDates {
     position: absolute;
     top: 4%;
     right: 0;
@@ -105,6 +105,26 @@ section#top nav.horizontal img {
     color: #ffffcc;
     font-family: 'Lucida Calligraphy', fantasy;
     font-size: 1em; /* initial font size */
+
+    height: 300px; /* adjust this height to your needs */
+    overflow-y: scroll;
+  }
+
+  .eventDates {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .eventDates li {
+    font-size: 16px; /* adjust this font size to your needs */
+    line-height: 1.5;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .eventDates li:last-child {
+    border-bottom: none;
   }
 
   .toggle-menu {
