@@ -155,7 +155,6 @@ section#top nav.horizontal::after {
   transform: translateY(-50%);
   height: 320px;
   overflow-y: scroll;
-  padding: 20px;
 }
 
 .welcome-container p:hover {
