@@ -118,7 +118,7 @@ section#top nav.horizontal img {
   .eventDates li {
     font-size: 16px; /* adjust this font size to your needs */
     line-height: 1.2;
-    padding: 10px;
+    padding: 5px;
     border-bottom: 1px solid #ccc;
   }
   
@@ -153,9 +153,9 @@ section#top nav.horizontal::after {
   position: absolute;
   top: 60%;
   transform: translateY(-50%);
-  height: 223px;
+  height: 320px;
   overflow-y: scroll;
-  padding: 10px;
+  padding: 20px;
 }
 
 .welcome-container p:hover {
@@ -196,6 +196,14 @@ section#top nav.horizontal::after {
 #third::after {
     content: "\a\a";
     white-space: pre;
+}
+
+/* container holding the image and the text for buttons */
+.container {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  max-height: 500px;
 }
 
 /*
@@ -377,14 +385,6 @@ footer .legaldocs a:hover {
     transform: rotate(45deg) translate(-9px, -9px);
   }
 }
-
-  .welcome-message p {
-    /* display: none; */
-  }
-
-  .welcome-message h2 {
-    /* padding: 150px; */
-  }
 
   #eastguard {
     background-image: none;
