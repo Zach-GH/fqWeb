@@ -157,7 +157,7 @@ section#top nav.horizontal::after {
   overflow-y: scroll;
 }
 
-.welcome-container p:hover {
+.welcome-container:hover > .welcome-message {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
