@@ -182,6 +182,10 @@ section#top nav.horizontal::after {
     color: white;
 }
 
+.welcome-constraint {
+  padding: 30px;
+}
+
 #first::after {
     content: "\a\a";
     white-space: pre;
