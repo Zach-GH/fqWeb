@@ -1,40 +1,40 @@
 header, body, footer {
-    margin: 0;
-    font-family: sans-serif;
+  margin: 0;
+  font-family: sans-serif;
 }
 
 header {
-    position: relative;
-    text-align: center;
-    color: #ffffcc;
-    font-family: 'Lucida Calligraphy', fantasy;
-    background-color: black;
-    height: 600px;
+  position: relative;
+  text-align: center;
+  color: #ffffcc;
+  font-family: 'Lucida Calligraphy', fantasy;
+  background-color: black;
+  height: 600px;
 }
 
 /* main logic behind the creation of the alert scroll bar */
 #scroll-container {
-    position: fixed;
-    border-radius: 5px;
-    overflow: hidden;
-    /* This places an overlay over the top of the page */
-    left: 0;
-    right: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+  position: fixed;
+  border-radius: 5px;
+  overflow: hidden;
+  /* This places an overlay over the top of the page */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }
   
 #scroll-text {
-    /* animation properties */
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
     
-    /* change the speed of the alert text */
-    -moz-animation: move-alert 25s linear infinite;
-    -webkit-animation: move-alert 25s linear infinite;
-    animation: move-alert 25s linear infinite;
+  /* change the speed of the alert text */
+  -moz-animation: move-alert 25s linear infinite;
+  -webkit-animation: move-alert 25s linear infinite;
+  animation: move-alert 25s linear infinite;
 }
   
 /* for Firefox */
@@ -64,71 +64,71 @@ header {
 
 /* top banner area specifically for the castle */
 section#top nav.horizontal img {
-    float: left;
+  float: left;
 }
 
 .banner {
-    position: absolute;
-    left: 50%;
-    /* 
-     * moves the banner down from the top 
-     * of the page to leave room for the alert
-     */
-    top: 5%;
-    transform: translate(-50%, 0%);
-    max-width: 1200px;
-    margin: 0 auto;
-    float: left;
-    width: 54%;
+  position: absolute;
+  left: 50%;
+  /* 
+   * moves the banner down from the top 
+   * of the page to leave room for the alert
+   */
+  top: 5%;
+  transform: translate(-50%, 0%);
+  max-width: 1200px;
+  margin: 0 auto;
+  float: left;
+  width: 54%;
 }
 
 .castle {
-    width: 12.5%;
+  width: 12.5%;
 }
 
 #castle li {
-    clear: both;
-    content: "";
-    display: flex;
-    float: left;
-    list-style-type: none;
+  clear: both;
+  content: "";
+  display: flex;
+  float: left;
+  list-style-type: none;
 }
 
 /*
 * This section formats the event dates on the right-hand side of the screen
 */
 .titleEventDates {
-    position: absolute;
-    top: 4%;
-    right: 0;
-    text-align: center;
-    color: #ffffcc;
-    font-family: 'Lucida Calligraphy', fantasy;
-    font-size: 1em; /* initial font size */
-    height: 300px; /* adjust this height to your needs */
-    overflow-y: scroll;
-  }
+  position: absolute;
+  top: 4%;
+  right: 0;
+  text-align: center;
+  color: #ffffcc;
+  font-family: 'Lucida Calligraphy', fantasy;
+  font-size: 1em; /* initial font size */
+  height: 300px; /* adjust this height to your needs */
+  overflow-y: scroll;
+}
 
-  .eventDates {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+.eventDates {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
   
-  .eventDates li {
-    font-size: 16px; /* adjust this font size to your needs */
-    line-height: 1.2;
-    padding: 5px;
-    border-bottom: 1px solid #ccc;
-  }
+.eventDates li {
+  font-size: 16px; /* adjust this font size to your needs */
+  line-height: 1.2;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
   
-  .eventDates li:last-child {
-    border-bottom: none;
-  }
+.eventDates li:last-child {
+  border-bottom: none;
+}
 
-  .toggle-menu {
-    display: block;
-  }
+.toggle-menu {
+  display: block;
+}
 
   /* Style the hamburger icon */
 .toggle-menu-icon {
@@ -144,9 +144,9 @@ section#top nav.horizontal img {
  * vertical list to not be affected by float:left 
  */
 section#top nav.horizontal::after {
-    clear: both;
-    content: "";
-    display: table;
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .welcome-container {
@@ -174,12 +174,12 @@ section#top nav.horizontal::after {
  * and the text in the buttons
  */
 .welcome-message {
-    font-size: 18px;
-    line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .welcome-message p {
-    color: white;
+  color: white;
 }
 
 .welcome-constraint {
@@ -187,18 +187,18 @@ section#top nav.horizontal::after {
 }
 
 #first::after {
-    content: "\a\a";
-    white-space: pre;
+  content: "\a\a";
+  white-space: pre;
 }
 
 #second::after {
-    content: "\a\a";
-    white-space: pre;
+  content: "\a\a";
+  white-space: pre;
 }
 
 #third::after {
-    content: "\a\a";
-    white-space: pre;
+  content: "\a\a";
+  white-space: pre;
 }
 
 /* container holding the image and the text for buttons */
@@ -215,18 +215,18 @@ section#top nav.horizontal::after {
  * than it actually is, creating the illusion
  * of a never-ending map.
  */
- #eastguard {
-    background-image: url('fqImgLib/FQ_March_Of_Eastguard_Map.png');
-    box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
-    -ms-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
-    -moz-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
-    -webkit-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin: auto;
-    background-attachment: fixed;
-  }
+#eastguard {
+  background-image: url('fqImgLib/FQ_March_Of_Eastguard_Map.png');
+  box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
+  -ms-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
+  -moz-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
+  -webkit-box-shadow: inset 0px 0px 1.25em 9.375em #ffffcc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: auto;
+  background-attachment: fixed;
+}
 
 #left a {
 	color: #007bff; /* Blue link color */
@@ -239,78 +239,78 @@ section#top nav.horizontal::after {
 
 /* centered text for the buttons*/
 .centered {
-    position: absolute;
-    top: 60%;
-    left: 67%;
-    transform: translate(-50%, -50%);
-    font-size: 14.6667px;
-    font-size: 1.0em;
+   position: absolute;
+  top: 60%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+  font-size: 14.6667px;
+  font-size: 1.0em;
 }
 
 section#left {
-    float: none;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
+  float: none;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 section#left ul {
-    float: none;
-    position: relative;
-    height: 100vh;
-    /* remove bullets */
-    list-style-type: none;
-    padding-inline-start: 0px;
+  float: none;
+  position: relative;
+  height: 100vh;
+  /* remove bullets */
+  list-style-type: none;
+  padding-inline-start: 0px;
 }
 
 section#left ul p {
-    padding-inline-start: 8px;
-    font-size: small;
-    color: #009900;
+  padding-inline-start: 8px;
+  font-size: small;
+  color: #009900;
 }
 
 #left ul p::before {
-    content: "\a\a";
-    white-space: pre;
+  content: "\a\a";
+  white-space: pre;
 }
 
 /* copyright */
 footer {
-    background-color: black;
-    bottom: 0;
-    z-index: 5;
-    height: 600px;
+  background-color: black;
+  bottom: 0;
+  z-index: 5;
+  height: 600px;
 }
 
 footer p {
-    padding: 50px;
-    text-align: center;
-    color: white;
+  padding: 50px;
+  text-align: center;
+  color: white;
 }
 
 footer .thankyou {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 54%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54%;
 }
 
 footer .legaldocs {
-    text-align: center;
-    color: #007bff; /* Blue link color */
+  text-align: center;
+  color: #007bff; /* Blue link color */
 }
 
 footer .legaldocs a {
-    color: #007bff; /* Blue link color */
-    text-decoration: none; /* Remove underline */
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove underline */
 }
 
 footer .legaldocs a:hover {
-    color: #0056b3;
+  color: #0056b3;
 }
 
 /* mobile devices */
