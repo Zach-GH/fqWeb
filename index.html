@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="fqHome.css">
         <script src="fqJS/fqAlerts.js"></script>
         <script src="fqJS/fqToggleMenu.js"></script>
+        <link rel="stylesheet" type="text/css" href="fqHome.css">
+        <script type="text/javascript" src="fqJS/fqCountdown.js"></script>
     </head>
     <header>
         <!-- This section has to stay here or fqAlerts.js wont work -->
@@ -19,16 +21,10 @@
                 <section id="castle">
                     <img class="castle" src="fqImgLib/castle_fq_design.jpg">
                 </section>
-                <div class="titleEventDates">
-                    <h3>2023 Event Dates</h3>
-                    <ul class="eventDates">
-                        <li>Apr 14,15,16 - SOLD OUT</li>
-                        <li>May 19,20,21 - SOLD OUT</li>
-                        <li>Jun 9,10,11 - SOLD OUT</li>
-                        <li>Sep 8,9,10 - SOLD OUT</li>
-                        <li>Sep 29,30, Oct 1 - SOLD OUT</li>
-                        <li>Oct 27,28,29 - SOLD OUT</li>
-                    </ul>
+                <div id="timeUntilNextFQ">
+                    <h3>Time left until next FQ</h3>
+                    <div id="countdown">
+                    </div>
                 </div>
             </nav>
         </section>
@@ -55,12 +51,160 @@
         </div>
     </header>
     <body id="eastguard">
-        <section id="eastguard">
-        </section>
         <main>
             <section id="home">
+                <div class="events-grid">
+                    <div class="event">
+                      <div class="event-image">
+                        <img src="fqImgLib/undathos.jpg" alt="Event 1">
+                      </div>
+                      <div class="event-title">
+                        Jim's Undathos Eve 1
+                      </div>
+                      <div class="event-date">
+                        April 14,15,16 - SOLD OUT
+                      </div>
+                      <div class="registration-overlay">
+                        <div class="registration-form">
+                          <h3>Register for Jim's Undathos Eve 1</h3>
+                          <form>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name"><br><br>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email"><br><br>
+                            <input type="submit" value="Register">
+                          </form>
+                          <button class="close-registration">Close</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event-image">
+                          <img src="fqImgLib/undathos.jpg" alt="Event 2">
+                        </div>
+                        <div class="event-title">
+                          Jim's Undathos Eve 2
+                        </div>
+                        <div class="event-date">
+                          May 19,20,21 - SOLD OUT
+                        </div>
+                        <div class="registration-overlay">
+                          <div class="registration-form">
+                            <h3>Register for Jim's Undathos Eve 2</h3>
+                            <form>
+                              <label for="name">Name:</label>
+                              <input type="text" id="name" name="name"><br><br>
+                              <label for="email">Email:</label>
+                              <input type="email" id="email" name="email"><br><br>
+                              <input type="submit" value="Register">
+                            </form>
+                            <button class="close-registration">Close</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="event">
+                        <div class="event-image">
+                          <img src="fqImgLib/undathos.jpg" alt="Event 3">
+                        </div>
+                        <div class="event-title">
+                          Jim's Undathos Eve 3
+                        </div>
+                        <div class="event-date">
+                          Jun 9,10,11 - SOLD OUT
+                        </div>
+                        <div class="registration-overlay">
+                          <div class="registration-form">
+                            <h3>Register for Jim's Undathos Eve 3</h3>
+                            <form>
+                              <label for="name">Name:</label>
+                              <input type="text" id="name" name="name"><br><br>
+                              <label for="email">Email:</label>
+                              <input type="email" id="email" name="email"><br><br>
+                              <input type="submit" value="Register">
+                            </form>
+                            <button class="close-registration">Close</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="event">
+                        <div class="event-image">
+                          <img src="fqImgLib/undathos.jpg" alt="Event 4">
+                        </div>
+                        <div class="event-title">
+                          Jim's Undathos Eve 4
+                        </div>
+                        <div class="event-date">
+                          Sep 8,9,10 - SOLD OUT
+                        </div>
+                        <div class="registration-overlay">
+                          <div class="registration-form">
+                            <h3>Register for Jim's Undathos Eve 4</h3>
+                            <form>
+                              <label for="name">Name:</label>
+                              <input type="text" id="name" name="name"><br><br>
+                              <label for="email">Email:</label>
+                              <input type="email" id="email" name="email"><br><br>
+                              <input type="submit" value="Register">
+                            </form>
+                            <button class="close-registration">Close</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="event">
+                        <div class="event-image">
+                          <img src="fqImgLib/undathos.jpg" alt="Event 5">
+                        </div>
+                        <div class="event-title">
+                          Jim's Undathos Eve 5
+                        </div>
+                        <div class="event-date">
+                          Sep 29,30, Oct 1 - SOLD OUT
+                        </div>
+                        <div class="registration-overlay">
+                          <div class="registration-form">
+                            <h3>Register for Jim's Undathos Eve 5</h3>
+                            <form>
+                              <label for="name">Name:</label>
+                              <input type="text" id="name" name="name"><br><br>
+                              <label for="email">Email:</label>
+                              <input type="email" id="email" name="email"><br><br>
+                              <input type="submit" value="Register">
+                            </form>
+                            <button class="close-registration">Close</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="event">
+                        <div class="event-image">
+                          <img src="fqImgLib/undathos.jpg" alt="Event 6">
+                        </div>
+                        <div class="event-title">
+                          Jim's Undathos Eve 6
+                        </div>
+                        <div class="event-date">
+                          Oct 27,28,29 - SOLD OUT
+                        </div>
+                        <div class="registration-overlay">
+                          <div class="registration-form">
+                            <h3>Register for Jim's Undathos Eve 6</h3>
+                            <form>
+                              <label for="name">Name:</label>
+                              <input type="text" id="name" name="name"><br><br>
+                              <label for="email">Email:</label>
+                              <input type="email" id="email" name="email"><br><br>
+                              <input type="submit" value="Register">
+                            </form>
+                            <button class="close-registration">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>         
                 <section id="left">
-                    <nav class="vertical">
                         <ul> <!-- list of page references -->
                             <!-- Add the hamburger icon to your HTML code -->
                             <div class="toggle-menu-icon">
@@ -119,7 +263,6 @@
                                 </li>
                             </div>
                         </ul>
-                    </nav>        
                 </section>
             </section>
         </main>
@@ -143,5 +286,6 @@
                 <a href="fqPages/legal/fqLegal.html">Legal</a>
             </div>
         </footer>
+        <script src="fqJS/event.js"></script>
     </body>
 </html>
